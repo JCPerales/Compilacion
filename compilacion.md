@@ -285,3 +285,15 @@ Finalmente deberíamos tener las siguientes carpetas dentro de `$HOME/comps/GCC/
 - share
 
 ### 3.2 GNU CC 7.1
+
+Dentro de la carpeta creada al extraer GCC-7 creamos tres carpetas, mpc, gmp y mpfr, dentro los respectivos fuentes de MPC, GMP y MPFR
+
+Creamos la jerarquía de directorios `$HOME/comps/GCC/7.1.0`
+
+Creamos una carpeta fuera de la carpeta de GCC-7, al mismo nivel de GCC-7 con el nombre `objdir`, nos vemos a dicha carpeta y desde dicha carpeta ejecutamos: 
+
+~~~~
+$ ../gcc-7.1.0/configure --enable-languages=c,c++,fortran --disable-multilib --prefix=$HOME/comps/GCC/7.1.0 --with-local-prefix=$HOME/comps/GCC/7.1.0
+$ make
+$ make install
+~~~~
